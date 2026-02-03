@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Flash Card App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>🎴 Flash Card App</h1>
+
+<!-- MENU -->
+<div id="menu">
+  <input id="playerName" placeholder="Your Name">
+
+  <select id="grade">
+    <option value="1">Grade 1–2</option>
+    <option value="3">Grade 3–4</option>
+    <option value="5">Grade 5+</option>
+  </select>
+
+  <select id="subjects" multiple>
+    <option value="math">Math</option>
+    <option value="english">English</option>
+    <option value="science">Science</option>
+    <option value="geography">Geography</option>
+    <option value="history">History</option>
+    <option value="animals">Animals</option>
+    <option value="custom">Custom</option>
+  </select>
+
+  <button id="start" type="button">Start</button>
+  <button id="create" type="button">Create Your Own Flashcards</button>
+</div>
+
+<!-- GAME -->
+<div id="game" hidden>
+  <div id="timer">15</div>
+
+  <div id="card">
+    <div id="question"></div>
+    <input id="answer" placeholder="Your answer">
+    <button id="check" type="button">Check</button>
+    <button id="next" type="button">Next</button>
+  </div>
+
+  <div id="feedback"></div>
+  <div id="stats">
+    Score: <span id="score">0</span> |
+    Lives: <span id="lives">3</span>
+  </div>
+</div>
+
+<!-- CREATE FLASHCARDS -->
+<div id="createScreen" hidden>
+  <h2>Create Flashcard</h2>
+
+  <input id="customQuestion" placeholder="Question">
+  <input id="customAnswer" placeholder="Answer">
+
+  <select id="customDifficulty">
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+  </select>
+
+  <button id="saveCard" type="button">Save Card</button>
+  <button id="backMenu" type="button">Back</button>
+
+  <p id="createMsg"></p>
+</div>
+
+<!-- END -->
+<div id="end" hidden>
+  <h2 id="endMsg"></h2>
+  <ul id="leaderboard"></ul>
+  <button onclick="location.reload()">Restart</button>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
